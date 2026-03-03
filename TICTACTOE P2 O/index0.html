@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="" />
+		<link rel="stylesheet" href="style0.css" />
+	</head>
+	<body class="colb5">
+		<div class="space2"></div>
+		<div class="cont">
+			<div class="box1">
+				<div class="box3">
+					<img src="/ASSETS/Combined Shape Copy.png" alt="" />
+					<img src="/ASSETS/Oval Copy (1).png" alt="" />
+				</div>
+				<div class="box4 colb6">
+					<p class="cent colt8"></p>
+					<p class="cent colt8">TURN</p>
+				</div>
+				<div class="box5">
+					<a href="/HOME/home.html"
+						><button class="btn3">
+							<img src="/ASSETS/Redo.svg" alt="" /></button
+					></a>
+				</div>
+			</div>
+			<div class="space"></div>
+			<div class="wrapper">
+				<div class="one colb6"></div>
+				<div class="two colb6"></div>
+				<div class="three colb6"></div>
+				<div class="four colb6"></div>
+				<div class="five colb6"></div>
+				<div class="six colb6"></div>
+				<div class="seven colb6"></div>
+				<div class="eith colb6"></div>
+				<div class="nine colb6"></div>
+			</div>
+			<div class="space"></div>
+			<div class="box2">
+				<div class="box6 colb1 marg0">
+					<p class="marg0">X (P2)</p>
+					<p class="marg0">0</p>
+				</div>
+				<div class="box7 colb7 marg0">
+					<p class="marg0">TIES</p>
+					<p class="marg0">0</p>
+				</div>
+				<div class="box8 colb3 marg0">
+					<p class="marg0">O (P1)</p>
+					<p class="marg0">0</p>
+				</div>
+			</div>
+		</div>
+		<dialog id="p1" class="p1">
+			<div class="contd">
+				<div class="txt1">
+					<p>PLAYER 1 WINS!</p>
+				</div>
+				<div class="space3"></div>
+				<div class="txt2">
+					<img class="img1" src="/ASSETS/Oval Copy (1).png" alt="" />
+					<h1>TAKES THE ROUND</h1>
+				</div>
+				<div class="space3"></div>
+				<div class="txt3">
+					<button class="btn3 size">QUIT</button>
+					<button class="btn2 size">NEXT ROUND</button>
+				</div>
+			</div>
+		</dialog>
+		<dialog id="p2" class="p2">
+			<div class="contd">
+				<div class="txt1">
+					<p>PLAYER 2 WINS!</p>
+				</div>
+				<div class="space3"></div>
+				<div class="txt22">
+					<img class="img1" src="/ASSETS/Combined Shape Copy.png" alt="" />
+					<h1>TAKES THE ROUND</h1>
+				</div>
+				<div class="space3"></div>
+				<div class="txt3">
+					<button class="btn3 size">QUIT</button>
+					<button class="btn2 size">NEXT ROUND</button>
+				</div>
+			</div>
+		</dialog>
+		<dialog class="d3">
+			<div class="contd">
+				<div class="b33">ROUND TIED</div>
+				<div class="txt3">
+					<button class="btn3 size">QUIT</button>
+					<button class="btn2 size">NEXT ROUND</button>
+				</div>
+			</div>
+		</dialog>
+		<script>
+			const $test = document.querySelector("#test");
+			const $p1 = document.querySelector("#p1");
+			const $p2 = document.querySelector("#p2");
+
+			$test.addEventListener("click", () => {
+				$p2.showModal();
+				openCheck($p2);
+			});
+		</script>
+	</body>
+</html>

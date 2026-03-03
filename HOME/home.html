@@ -7,28 +7,28 @@
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="" />
-        <link rel="stylesheet" href="/HOME/home.css">
+		<link rel="stylesheet" href="/HOME/home.css" />
 	</head>
 	<body class="colb5">
-        <div class="space2"></div>
+		<div class="space2"></div>
 		<div class="cont">
 			<div class="box1">
 				<img src="/ASSETS/Combined Shape Copy.png" alt="" />
 				<img src="/ASSETS/Oval Copy (1).png" alt="" />
 			</div>
-            <div class="space"></div>
+			<div class="space"></div>
 			<div class="box2 colb6">
 				<div class="box5">
 					<p class="colt8">PICK PLAYER 1’S MARK</p>
 				</div>
 				<div class="box6 colb5">
 					<div class="box8">
-						<button class="cnop1">
+						<button class="cnop1" id="char1">
 							<img src="/ASSETS/Combined Shape Copy 2.png" alt="" />
 						</button>
 					</div>
 					<div class="box9">
-						<button class="cnop2">
+						<button class="cnop2" id="char2">
 							<img src="/ASSETS/Oval Copy (2).png" alt="" />
 						</button>
 					</div>
@@ -37,14 +37,89 @@
 					<p class="colt8">REMEMBER : X GOES FIRST</p>
 				</div>
 			</div>
-            <div class="space"></div>
-			<div  class="box3">
-				<button class="btn2 bbb">NEW GAME (VS CPU)</button>
-			</div>
-            <div class="space"></div>
-			<div  class="box4">
-				<button class="btn1 bbb">NEW GAME (VS PLAYER)</button>
+			<div class="space"></div>
+			<div class="btnbox">
+				<div id="link1" class="box3">
+					<a id="link11" class="bbb btb" href="/TICTACTOE P2 X/index.html"
+						><button id="link111" class="btn2 bbb btb" id="btn1">
+							NEW GAME (VS PLAYER)
+						</button></a
+					>
+				</div>
+				<div id="link2" class="box3 none">
+					<a id="link22" class="bbb btb none" href="/TICTACTOE P2 O/index0.html"
+						><button id="link222" class="btn2 bbb btb none" id="btn1">
+							NEW GAME (VS PLAYER)
+						</button></a
+					>
+				</div>
+				<div class="space3"></div>
+				<div id="link3" class="box4">
+					<a id="link33" class="bbb btb" href="/TICTACTOE PC X/indexpc.html"
+						><button id="link333" class="btn1 bbb btb" id="btn2">
+							NEW GAME (VS CPU)
+						</button></a
+					>
+				</div>
+				<div id="link4" class="box4 none">
+					<a
+						id="link44"
+						class="bbb none btb"
+						href="/TICTACTOE PC O/indexpc0.html"
+						><button id="link444" class="none btn1 bbb btb" id="btn2">
+							NEW GAME (VS CPU)
+						</button></a
+					>
+				</div>
 			</div>
 		</div>
+		<script>
+			const $char1 = document.querySelector("#char1");
+			const $char2 = document.querySelector("#char2");
+			const $btn1 = document.querySelector("#btn1");
+			const $btn2 = document.querySelector("#btn2");
+			const $link1 = document.querySelector("#link1");
+			const $link2 = document.querySelector("#link2");
+			const $link3 = document.querySelector("#link3");
+			const $link4 = document.querySelector("#link4");
+			const $link11 = document.querySelector("#link11");
+			const $link22 = document.querySelector("#link22");
+			const $link33 = document.querySelector("#link33");
+			const $link44 = document.querySelector("#link44");
+			const $link111 = document.querySelector("#link111");
+			const $link222 = document.querySelector("#link222");
+			const $link333 = document.querySelector("#link333");
+			const $link444 = document.querySelector("#link444");
+
+			$char1.addEventListener("click", () => {
+				$link1.classList.remove("none");
+				$link2.classList.add("none");
+				$link3.classList.remove("none");
+				$link4.classList.add("none");
+				$link11.classList.remove("none");
+				$link22.classList.add("none");
+				$link33.classList.remove("none");
+				$link44.classList.add("none");
+				$link111.classList.remove("none");
+				$link222.classList.add("none");
+				$link333.classList.remove("none");
+				$link444.classList.add("none");
+			});
+
+			$char2.addEventListener("click", () => {
+				$link2.classList.remove("none");
+				$link1.classList.add("none");
+				$link4.classList.remove("none");
+				$link3.classList.add("none");
+				$link22.classList.remove("none");
+				$link11.classList.add("none");
+				$link44.classList.remove("none");
+				$link33.classList.add("none");
+				$link222.classList.remove("none");
+				$link111.classList.add("none");
+				$link444.classList.remove("none");
+				$link333.classList.add("none");
+			});
+		</script>
 	</body>
 </html>
