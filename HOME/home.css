@@ -115,6 +115,11 @@
 	align-items: center;
 }
 
+.oval2 {
+	width: 22%;
+	height: auto;
+}
+
 .box2 {
 	display: flex;
 	flex-direction: column;

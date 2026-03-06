@@ -8,102 +8,208 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="" />
 		<link rel="stylesheet" href="stylepc.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body class="colb5">
 		<div class="space2"></div>
 		<div class="cont">
 			<div class="box1">
 				<div class="box3">
-					<img src="/ASSETS/Combined Shape Copy.png" alt="" />
-					<img src="/ASSETS/Oval Copy (1).png" alt="" />
+					<img src="/ASSETS/Combined Shape Copy.png" alt="X" />
+					<img src="/ASSETS/Oval Copy (1).png" alt="O" />
 				</div>
 				<div class="box4 colb6">
-					<p class="cent colt8"></p>
+					<p id="turn" class="cent colt8"></p>
 					<p class="cent colt8">TURN</p>
 				</div>
 				<div class="box5">
-					<a href="/HOME/home.html"
-						><button class="btn3">
-							<img src="/ASSETS/Redo.svg" alt="" /></button
-					></a>
+					<a href="/HOME/home.html">
+						<button class="btn3">
+							<img src="/ASSETS/Redo.svg" alt="Restart" />
+						</button>
+					</a>
 				</div>
 			</div>
 			<div class="space"></div>
-			<div class="wrapper">
-				<div class="one colb6"></div>
-				<div class="two colb6"></div>
-				<div class="three colb6"></div>
-				<div class="four colb6"></div>
-				<div class="five colb6"></div>
-				<div class="six colb6"></div>
-				<div class="seven colb6"></div>
-				<div class="eith colb6"></div>
-				<div class="nine colb6"></div>
+			<div id="board" class="wrapper">
+				<div class="square one colb6 boxclss" data-index="0"></div>
+				<div class="square two colb6 boxclss" data-index="1"></div>
+				<div class="square three colb6 boxclss" data-index="2"></div>
+				<div class="square four colb6 boxclss" data-index="3"></div>
+				<div class="square five colb6 boxclss" data-index="4"></div>
+				<div class="square six colb6 boxclss" data-index="5"></div>
+				<div class="square seven colb6 boxclss" data-index="6"></div>
+				<div class="square eith colb6 boxclss" data-index="7"></div>
+				<div class="square nine colb6 boxclss" data-index="8"></div>
 			</div>
 			<div class="space"></div>
 			<div class="box2">
 				<div class="box6 colb1 marg0">
 					<p class="marg0">X (P1)</p>
-					<p class="marg0">0</p>
+					<p id="winx" class="marg0">0</p>
 				</div>
 				<div class="box7 colb7 marg0">
 					<p class="marg0">TIES</p>
-					<p class="marg0">0</p>
+					<p id="ties" class="marg0">0</p>
 				</div>
 				<div class="box8 colb3 marg0">
 					<p class="marg0">O (CPU)</p>
-					<p class="marg0">0</p>
+					<p id="wino" class="marg0">0</p>
 				</div>
 			</div>
 		</div>
-		<dialog id="p2" class="p2">
+		<dialog id="p1" class="p1">
 			<div class="contd">
+				<div class="txt1"><p>PLAYER 1 WINS!</p></div>
 				<div class="space3"></div>
-				<div class="txt22">
-					<h1>RESTART GAME?</h1>
-				</div>
-				<div class="space3"></div>
-				<div class="txt3">
-					<button class="btn3 size">NO, CANCEL</button>
-					<button class="btn2 size">YES, RESTART</button>
-				</div>
-			</div>
-		</dialog>
-		<dialog id="p2" class="p2">
-			<div class="contd">
-				<div class="txt1">
-					<p>YOU WON!</p>
-				</div>
-				<div class="space3"></div>
-				<div class="txt22">
-					<img class="img1" src="/ASSETS/Combined Shape Copy.png" alt="" />
+				<div class="txt2">
+					<img class="img1" src="/ASSETS/Oval Copy (1).png" alt="O" />
 					<h1>TAKES THE ROUND</h1>
 				</div>
 				<div class="space3"></div>
 				<div class="txt3">
-					<button class="btn3 size">QUIT</button>
-					<button class="btn2 size">NEXT ROUND</button>
+					<button class="btn3 size quit">QUIT</button>
+					<button class="btn2 size next">NEXT ROUND</button>
+				</div>
+			</div>
+		</dialog>
+		<dialog id="p2" class="p2">
+			<div class="contd">
+				<div class="txt1"><p>PLAYER 2 WINS!</p></div>
+				<div class="space3"></div>
+				<div class="txt22">
+					<img class="img1" src="/ASSETS/Combined Shape Copy.png" alt="X" />
+					<h1>TAKES THE ROUND</h1>
+				</div>
+				<div class="space3"></div>
+				<div class="txt3">
+					<button class="btn3 size quit">QUIT</button>
+					<button class="btn2 size next">NEXT ROUND</button>
 				</div>
 			</div>
 		</dialog>
 		<dialog class="d3">
-			<div class="contd">
+			<div class="contd3">
 				<div class="b33">ROUND TIED</div>
-				<div class="txt3">
-					<button class="btn3 size">QUIT</button>
-					<button class="btn2 size">NEXT ROUND</button>
+				<div class="space2"></div>
+				<div class="txt33">
+					<button class="btn3 size quit">QUIT</button>
+					<button class="btn2 size next">NEXT ROUND</button>
 				</div>
 			</div>
 		</dialog>
 		<script>
-			const $test = document.querySelector("#test");
-			const $p1 = document.querySelector("#p1");
-			const $p2 = document.querySelector("#p2");
-
-			$test.addEventListener("click", () => {
-				$p2.showModal();
-				openCheck($p2);
+			const turnEl = document.getElementById("turn");
+			const winXEl = document.getElementById("winx");
+			const winOEl = document.getElementById("wino");
+			const tiesEl = document.getElementById("ties");
+			const p1WinDlg = document.getElementById("p1");
+			const p2WinDlg = document.getElementById("p2");
+			const tieDlg = document.querySelector(".d3");
+			const squares = document.querySelectorAll("#board .square");
+			const imgX = "/ASSETS/Combined Shape Copy.png";
+			const imgO = "/ASSETS/Oval Copy (1).png";
+			let board = Array(9).fill(null);
+			let currentPlayer = "X";
+			let gameActive = true;
+			turnEl.innerHTML = `<img src="${imgX}" alt="X">`;
+			const winningCombinations = [
+				[0, 1, 2],
+				[3, 4, 5],
+				[6, 7, 8],
+				[0, 3, 6],
+				[1, 4, 7],
+				[2, 5, 8],
+				[0, 4, 8],
+				[2, 4, 6],
+			];
+			function checkWin(player) {
+				return winningCombinations.some((combo) =>
+					combo.every((i) => board[i] === player),
+				);
+			}
+			function checkTie() {
+				return board.every((cell) => cell !== null);
+			}
+			function endGame(winner) {
+				gameActive = false;
+				if (winner === "X") {
+					winXEl.textContent = Number(winXEl.textContent) + 1;
+					p2WinDlg.showModal();
+				} else if (winner === "O") {
+					winOEl.textContent = Number(winOEl.textContent) + 1;
+					p1WinDlg.showModal();
+				} else {
+					tiesEl.textContent = Number(tiesEl.textContent) + 1;
+					tieDlg.showModal();
+				}
+			}
+			function computerMove() {
+				if (!gameActive) return;
+				let empty = board
+					.map((v, i) => (v === null ? i : null))
+					.filter((v) => v !== null);
+				if (empty.length === 0) return;
+				let move = empty[Math.floor(Math.random() * empty.length)];
+				board[move] = "O";
+				squares[move].innerHTML = `<img src="${imgO}" alt="O">`;
+				if (checkWin("O")) {
+					endGame("O");
+					return;
+				}
+				if (checkTie()) {
+					endGame(null);
+					return;
+				}
+				currentPlayer = "X";
+				turnEl.innerHTML = `<img src="${imgX}" alt="X">`;
+			}
+			function resetBoard() {
+				board = Array(9).fill(null);
+				squares.forEach((sq) => (sq.innerHTML = ""));
+				currentPlayer = "X";
+				gameActive = true;
+				turnEl.innerHTML = `<img src="${imgX}" alt="X">`;
+			}
+			squares.forEach((square) => {
+				square.addEventListener("click", () => {
+					if (!gameActive) return;
+					if (currentPlayer !== "X") return;
+					const index = Number(square.dataset.index);
+					if (board[index] !== null) return;
+					board[index] = "X";
+					square.innerHTML = `<img src="${imgX}" alt="X">`;
+					if (checkWin("X")) {
+						endGame("X");
+						return;
+					}
+					if (checkTie()) {
+						endGame(null);
+						return;
+					}
+					currentPlayer = "O";
+					turnEl.innerHTML = `<img src="${imgO}" alt="O">`;
+					setTimeout(computerMove, 500);
+				});
 			});
+			document.querySelectorAll(".next").forEach((btn) =>
+				btn.addEventListener("click", () => {
+					p1WinDlg.close();
+					p2WinDlg.close();
+					tieDlg.close();
+					resetBoard();
+				}),
+			);
+			document.querySelectorAll(".quit").forEach((btn) =>
+				btn.addEventListener("click", () => {
+					location.href = "/HOME/home.html";
+				}),
+			);
 		</script>
 	</body>
 </html>

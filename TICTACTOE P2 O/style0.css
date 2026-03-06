@@ -201,7 +201,7 @@
 .box4 {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	border-radius: 8px;
 	width: 33%;
@@ -268,11 +268,48 @@
 	background-color: rgba(31, 54, 65, 1);
 }
 
+.d3::backdrop {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	opacity: 70%;
+}
+
+.p1::backdrop {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	opacity: 70%;
+}
+
+.p2::backdrop {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	opacity: 70%;
+}
+
 .p2 {
 	width: 100%;
 	height: 33%;
 	border: solid rgba(31, 54, 65, 1);
 	background-color: rgba(31, 54, 65, 1);
+}
+
+.d3 {
+	width: 100%;
+	height: 33%;
+	border: solid rgba(31, 54, 65, 1);
+	background-color: rgba(31, 54, 65, 1);
+}
+
+.contd3 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 }
 
 .contd {
@@ -312,7 +349,15 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 13%;
+	width: 15%;
+	align-items: center;
+}
+
+.txt33 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 15%;
 	align-items: center;
 }
 
@@ -328,10 +373,18 @@
 .b33 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	width: 25%;
 	align-items: center;
 	color: rgba(168, 191, 201, 1);
+}
+
+.boxclss {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 5px 0px rgba(16, 33, 42, 1);
 }
 
 @media only screen and (max-width: 1023px) {

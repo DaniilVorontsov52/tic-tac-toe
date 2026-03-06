@@ -23,13 +23,43 @@
 				</div>
 				<div class="box6 colb5">
 					<div class="box8">
-						<button class="cnop1" id="char1">
-							<img src="/ASSETS/Combined Shape Copy 2.png" alt="" />
+						<button class="cnop2" id="char1">
+							<div id="xc" class="">
+								<img
+									id="iks"
+									class="iks"
+									src="/ASSETS2/output-onlinepngtools.png"
+									alt=""
+								/>
+							</div>
+							<div id="xb" class="none">
+								<img
+									id="iks"
+									class="iks"
+									src="/ASSETS/Combined Shape Copy 2.png"
+									alt=""
+								/>
+							</div>
 						</button>
 					</div>
 					<div class="box9">
-						<button class="cnop2" id="char2">
-							<img src="/ASSETS/Oval Copy (2).png" alt="" />
+						<button class="cnop1" id="char2">
+							<div id="kb" class="">
+								<img
+									id="oval"
+									class="oval oval2"
+									src="/ASSETS2/Oval Copy (4).png"
+									alt=""
+								/>
+							</div>
+							<div id="kc" class="none">
+								<img
+									id="oval"
+									class="oval oval2"
+									src="/ASSETS/Oval Copy (2).png"
+									alt=""
+								/>
+							</div>
 						</button>
 					</div>
 				</div>
@@ -90,6 +120,10 @@
 			const $link222 = document.querySelector("#link222");
 			const $link333 = document.querySelector("#link333");
 			const $link444 = document.querySelector("#link444");
+			const $kc = document.querySelector("#kc");
+			const $kb = document.querySelector("#kb");
+			const $xc = document.querySelector("#xc");
+			const $xb = document.querySelector("#xb");
 
 			$char1.addEventListener("click", () => {
 				$link1.classList.remove("none");
@@ -104,6 +138,16 @@
 				$link222.classList.add("none");
 				$link333.classList.remove("none");
 				$link444.classList.add("none");
+
+				$char2.classList.remove("cnop2");
+				$char2.classList.add("cnop1");
+				$char1.classList.remove("cnop1");
+				$char1.classList.add("cnop2");
+
+				$kb.classList.remove("none");
+				$kc.classList.add("none");
+				$xb.classList.add("none");
+				$xc.classList.remove("none");
 			});
 
 			$char2.addEventListener("click", () => {
@@ -119,6 +163,16 @@
 				$link111.classList.add("none");
 				$link444.classList.remove("none");
 				$link333.classList.add("none");
+
+				$char1.classList.remove("cnop2");
+				$char1.classList.add("cnop1");
+				$char2.classList.remove("cnop1");
+				$char2.classList.add("cnop2");
+
+				$kb.classList.add("none");
+				$kc.classList.remove("none");
+				$xb.classList.remove("none");
+				$xc.classList.add("none");
 			});
 		</script>
 	</body>
